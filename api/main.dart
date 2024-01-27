@@ -6,6 +6,6 @@ import 'package:supabase/supabase.dart';
 
 late MessageRepository messageRepository;
 Future<HttpServer> run(Handler handler, InternetAddress ip, int port) {
-  final dbClient = SupabaseClient(Env.SUPABASE_URL, Env.SUPABASE_ROLE_KEY);
+  final dbClient = SupabaseClient(Env.SUPABASE_URL, Env.SUPABASE_SERVICE_ROLE_KEY);
   return serve(handler, ip, port);
 }
